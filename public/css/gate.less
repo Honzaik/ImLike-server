@@ -1,0 +1,90 @@
+/* VARIABLES START */
+
+@black: rgb(0, 0, 0);
+@greyish: rgb(240, 240, 240);
+@white: rgb(255, 255, 255);
+@bodyBackground: rgb(245, 112, 22);
+@loginButtonBackground: rgb(50, 50, 50);
+@descriptionBackground: rgba(255, 255, 255, 0.1);
+@errorColor: rgb(224, 53, 53);
+@errorBorderColor: rgb(214, 19, 19);
+@btnBackground: #D11255;
+@btnBorder: #ce7393;
+@btnBackgroundPressed: #ce4a78;
+
+/* VARIABLES END */
+
+.form-container{
+	background: #D11255;
+	padding: 10px;
+	border-radius: 5px;
+	max-width: 600px;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	color: @white;
+	text-shadow: 0 0 5px #828282;
+}
+
+#response{
+	display: none;
+	text-shadow: none;
+	word-wrap: break-word;
+}
+
+.navbar-login{
+	font-size: 2em;
+	min-height: 0px;
+	.row{
+		div{
+			padding: 0;
+		}
+		.btn{
+			border-radius: 2px;
+			background: @btnBackground;
+			border-color: @btnBorder;
+			&:hover, &:active, &:focus{
+				background: @btnBackgroundPressed;
+			}
+		}
+	}
+}
+
+#form-register{
+	display: none;
+}
+
+.form-group{
+	margin-bottom: 5px;
+}
+
+.glyphicon{
+	top: -1.8em;
+	left: 94%;
+	&.glyphicon-ok{
+		color: rgb(53, 224, 82);
+	}
+	&.glyphicon-remove{
+		color: rgb(224, 53, 53);
+	}
+}
+
+.input-error{
+	background: @errorColor;
+	border: 1px solid @errorBorderColor;
+	margin-top: -1em;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+input{
+	&[type="submit"]{
+		margin-bottom: 1em;
+		background: @btnBackground;
+		border-color: @btnBorder;
+		&:hover, &:active, &:focus{
+			color: inherit;
+			background: @btnBackgroundPressed;
+		}
+	}
+}

@@ -1,0 +1,262 @@
+/* VARIABLES START */
+
+@black: rgb(0, 0, 0);
+@greyish: rgb(240, 240, 240);
+@white: rgb(255, 255, 255);
+//@bodyBackground: rgb(245, 112, 22);
+@loginButtonBackground: rgb(100, 100, 100);
+@descriptionBackground: rgba(255, 255, 255, 0.1);
+
+//@bodyBackground: rgb(245, 112, 22);
+//@bodyBackground: #D11255;
+@userInfoBackground: rgba(209,18,85, 1);
+//@userInfoBackground: rgb(10, 143, 233);
+//@userInfoBackground: #24A741;
+@bodyBackground: rgba(36, 167, 65, 1);
+
+@postWidth: 300px;
+@postHeight: @postWidth/(9/16);
+
+/* VARIABLES END */
+
+.container{
+	overflow: hidden;
+	padding: 0px;
+
+	@media (min-width: 1200px){
+		width: 1200px !important;
+	}
+	@media (max-width: 1199px) and (min-width: 900px){
+		width: 900px;
+	}
+	@media (max-width: 899px) and (min-width: 600px){
+		width: 600px;
+	}
+}
+
+.error-container, .success-container{
+	display: none;
+}
+
+.row{
+	margin: 0;
+}
+
+.userInfo{
+	line-height: 1;
+	text-align: center;
+	color: white;
+	background: @userInfoBackground;
+	text-shadow: 0 0 4px #D1D1D1;
+	border-top: 2px solid rgba(255,255,255,0.2);
+	> div{
+		min-height: 80px;
+	}
+	> div:last-child{
+		border: none;
+	}
+
+	span{
+		display: inline-block;
+	}
+
+	.user-info{
+		padding: 5px;
+	}
+
+	.user-text{
+		display: inline;
+	}
+
+	.change-image{
+		background: rgba(0,0,0,0.2);
+		margin-top: 3px;
+		border-radius: 0px;
+		border: none;
+		padding: 10px 15px;
+		&:hover{
+				background: rgba(255,255,255,0.2);
+			}
+			&:active{
+				-ms-transform: scale(0.9);
+				-webkit-transform: scale(0.9);
+				transform: scale(0.9);
+			}
+	}
+
+	.user-text-input{
+		display: inline-block;
+		font-size: 13px;
+		color: black;
+		width: 100%;
+	}
+
+	.user-text-confirm{
+		background: rgba(0,0,0,0.2);
+		margin-top: 3px;
+		float: right;
+		border-radius: 0px;
+		border: none;
+		padding: 10px 15px;
+		&:hover{
+				background: rgba(255,255,255,0.2);
+			}
+			&:active{
+				-ms-transform: scale(0.9);
+				-webkit-transform: scale(0.9);
+				transform: scale(0.9);
+			}
+	}
+
+	.image{
+		text-align: center;
+		padding: 0px;
+		.holder{
+			width: 70px;
+			height: 70px;
+			margin-top: 5px;
+		}
+	}
+
+	.follow{
+		padding: 5px;
+		button{
+			width: 100%;
+			background: rgba(0,0,0,0.2);
+			border-radius: 0px;
+			padding: 10px 10px;
+			border: none;
+
+			&:hover{
+				background: rgba(255,255,255,0.2);
+			}
+			&:active{
+				-ms-transform: scale(0.9);
+				-webkit-transform: scale(0.9);
+				transform: scale(0.9);
+			}
+		}
+
+		.follow-button{
+			background: rgba(125, 211, 88, 1);
+			&:hover{
+				background: rgba(125, 211, 88, 0.9);
+			}
+		}
+
+		.unfollow-button{
+			background: rgba(224, 49, 49, 1);
+
+			&:hover{
+				background: rgba(224, 49, 49, 0.9);
+			}
+		}
+
+		a{
+			display: inline-block;
+			color: inherit;
+		}
+	}
+
+	.user-info{
+		position: relative;
+		text-align: left;
+		> span{
+			display: inline;
+		}
+		.profile-username{
+			color: white;
+			font-size: 3em;
+			text-shadow: 0 0 4px #D1D1D1;
+			font-weight: 200;
+			padding: 2px 5px;
+		}
+		.user-desc{
+			font-weight: bold;
+			text-shadow: none;
+			color: rgb(230,230,230);
+			font-size: 13px;
+		}
+	}
+
+	.extra-info{
+		height: 80px;
+		padding: 0px;
+		.extra-info-table{
+			width: 100%;
+			height: 100%;
+		}
+
+		.value{
+			font-size: 2em;
+			font-weight: bold;
+		}
+
+		.followers, .following{
+			cursor: pointer;
+			&:hover{
+				opacity: 0.8;
+			}
+		}
+	}
+
+}
+
+.followBox{
+	font-size: 0px;
+	width: 400px;
+	height: 600px;
+	display: inline-block;
+	position: absolute;
+	background: rgba(209,18,85, 0.8);;
+	text-align: center;
+
+
+	.title{
+		font-size: 30px;
+		display: inline-block;
+		color: @white;
+		height: 40px;
+		margin-left: 20px;
+	}
+
+	a{
+		color: @white;
+		text-decoration: none;
+
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+
+	.load-more-followers-button{
+		font-size: 40px;
+		text-align: center;
+		color: @white;
+		width: 100%;
+		height: 60px;
+		background: @userInfoBackground;
+		border: 0px;
+
+		&:hover{
+			opacity: 0.9;
+		}
+	}
+
+	.follow-username{
+		font-size: 20px;
+		color: @white;
+		padding: 7px;
+		border-bottom: 1px solid rgba(200,200,200,1);
+		background: rgba(36, 167, 65, 0.8);
+		&:hover{
+			background: rgba(36, 167, 65, 0.7);
+		}
+	}
+	.users{
+		display: inline-block;
+		width: 400px;
+		height: 500px;
+		overflow: auto;
+	}
+}
